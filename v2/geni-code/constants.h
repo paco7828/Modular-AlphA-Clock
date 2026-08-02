@@ -14,26 +14,26 @@ const unsigned long DISPLAY_SETUP_CONFIRM_HOLD = 2000;  // ms - ennyi ideig nyom
 const uint8_t MCP23017_ADDR = 0x20;  // A0/A1/A2 = GND
 
 // Joystick
-const byte JS_X = 1;
-const byte JS_Y = 2;
-const byte JS_SW = 3;
+const byte JS_X = 0;
+const byte JS_Y = 1;
+const byte JS_SW = 2;
 
 // Buzzer
-const byte BUZZER = 6;
+const byte BUZZER = 9;
 const int NOTIF_MELODY[] = { 523, 659, 783, 1047 };  // C5, E5, G5, C6
 const int NOTIF_MELODY_LENGTH = 4;
 const int STARTUP_MELODY[] = { 523, 659, 784, 1047, 1319, 1047 };  // C5 E5 G5 C6 E6 C6 - rise, peak, resolve
 const int STARTUP_MELODY_LENGTH = 6;
 
 // GPS
-const byte GPS_TX = 7;
-const byte GPS_RX = 8;
+const byte GPS_TX = 3;
+const byte GPS_RX = 4;
 const uint16_t GPS_RATE_NORMAL_MS = 1000;  // 1 Hz - default GPS update rate
 const uint16_t GPS_RATE_HIGH_MS = 200;     // 5 Hz - boosted while SPEED mode is on screen
 
 // RTC
-const byte I2C_SDA = 4;
-const byte I2C_SCL = 5;
+const byte I2C_SDA = 6;
+const byte I2C_SCL = 7;
 
 // Button debounce delay
 const unsigned long DEBOUNCE_DELAY = 50;
