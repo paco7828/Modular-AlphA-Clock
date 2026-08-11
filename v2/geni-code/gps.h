@@ -242,7 +242,12 @@ public:
   }
 
   double getSpeedKmph() {
-    return gps.speed.kmph();
+    if (gps.speed.age() > 2 * GPS_RATE_HIGH_MS && gps.speed.age() != (unsigned long)-1) {
+      return 0.0;
+    }
+    double kmph = gps.speed.kmph();
+    if (kmph < 1.5) return 0.0;
+    return kmph;
   }
 
   // Function that calculates Hungarian time once and fills all values
