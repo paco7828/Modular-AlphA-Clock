@@ -119,14 +119,14 @@ SetTime setTime(&HDSP, BUZZER);
 
 void setup() {
   // Initialize preferences
-  preferences.begin("geniClock", false);
+  preferences.begin("modular-alpha", false);
 
   // I2C init
   Wire.begin(I2C_SDA, I2C_SCL);
 
   // Display
   runDisplayTypeSetup();
-  HDSP.displayText("- GENI -");
+  HDSP.displayText(" Alph-A ");
 
   // Initialize time structure to prevent 00:00:00 display
   currentTime.year = 2025;
@@ -171,7 +171,7 @@ void setup() {
   startupSoundStartTime = millis();
   startupSoundStep = 0;
 
-  // GENI is already shown, play first startup tone
+  // Title is already shown, play first startup tone
   tone(BUZZER, STARTUP_MELODY[0], STARTUP_NOTE_DURATIONS[0]);
 
   // Initialize display update timer
