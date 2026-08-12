@@ -1,4 +1,4 @@
-# GeniClock
+# Modular-AlphA-Clock
 
 A retro alphanumeric clock built around the ESP32-C3 SuperMini, with GPS-synchronized RTC timekeeping, a timer, an alarm, and temperature display. Designed to accept two different display families (HDSP-2111 / HDLY-2416) via a runtime-switchable configuration.
 
@@ -21,7 +21,7 @@ Display type selection: `DEFAULT_CLOCK_TYPE` in `constants.h`, overridable via N
 ## Firmware structure
 
 ```
-geni-code.ino       – main state machine, setup()/loop(), joystick routing, mode switching
+alpha-code.ino       – main state machine, setup()/loop(), joystick routing, mode switching
 constants.h          – pin mapping, timing constants, melodies, display strings
 HDSPDisplay.h         – MCP23017-based driver for both display types (clockType flag)
 gps.h                 – TinyGPSPlus wrapper, UTC→Hungarian local time conversion (CET/CEST, Zeller's congruence)
